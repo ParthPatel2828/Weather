@@ -1,28 +1,32 @@
-*{
+/* Default styles for larger screens */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body{
-    background: rgb(41,41,41);
-}
-.container{
+  }
+  
+  body {
+    background: rgb(41, 41, 41);
+  }
+  
+  .container {
     width: 450px;
-    background: linear-gradient(130deg , rgb(43,99,218) , rgb(43,99,218) );
+    background: linear-gradient(130deg, rgb(43, 99, 218), rgb(43, 99, 218));
     color: white;
     padding: 20px;
-    margin: 100px auto 0;
+    margin: 50px auto 0;
     border-radius: 10px;
     text-align: center;
-}
-.search{
+  }
+  
+  .search {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.search input{
+  }
+  
+  .search input {
     border: 0;
     outline: 0;
     padding: 10px 22px;
@@ -32,62 +36,89 @@ body{
     font-size: 18px;
     background-color: rgb(233, 250, 240);
     color: black;
-
-}
-.search button{
+  }
+  
+  .search button {
     border: 0;
     outline: 0;
     background-color: rgb(233, 240, 240);
     width: 60px;
-    border-radius: 50%;    
+    border-radius: 50%;
     height: 60px;
     cursor: pointer;
-}
-.search button img{
+  }
+  
+  .search button img {
     width: 40px;
-}
-.weather .icon{
+  }
+  
+  .weather .icon {
     margin-top: 20px;
     width: 16px;
-}
-.weather img{
+  }
+  
+  .weather img {
     height: 100px;
-}
-.weather p{ 
+  }
+  
+  .weather p {
     font-size: 22px;
     font-weight: 300;
-}
-.weather p{
+  }
+  
+  .weather p {
     font-size: 20px;
     font-weight: 200;
-
-    
-}
-
-.details{
+  }
+  
+  .details {
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     padding: 0 20px;
     margin-top: 50px;
-}
-.col{
+  }
+  
+  .col {
     display: flex;
     align-items: center;
     text-align: left;
-    
-
-}
-.col img{
+  }
+  
+  .col img {
     height: 73px;
     width: 70px;
     margin-right: 10px;
-}
-.error {
+  }
+  
+  .error {
     text-align: left;
     color: red;
     margin-top: 5px;
     display: none;
-   
-}
-
+  }
+  
+  /* Responsive styles for tablets and smaller screens */
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+      padding: 10px;
+      margin: 30px auto 0;
+    }
+    .search input {
+      font-size: 16px;
+    }
+    /* Add more responsive styles as needed */
+  }
+  
+  /* Responsive styles for mobile devices */
+  @media (max-width: 480px) {
+    .container {
+      width: 95%;
+    }
+    .search input {
+      font-size: 14px;
+    }
+    /* Add more responsive styles as needed */
+  }
+  

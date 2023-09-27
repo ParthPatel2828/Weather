@@ -1,6 +1,7 @@
 const searchInput = document.querySelector('.search input');
 const searchBtn = document.querySelector('.search button');
 const errorMessage = document.querySelector('.error');
+errorMessage.style.display = 'none';
 
 async function getWeather(cityName) { 
   try {
@@ -21,12 +22,11 @@ async function getWeather(cityName) {
     document.querySelector('.windS').innerHTML = Math.round(data.wind.speed) + "K/h";
     document.querySelector('.weather-description').innerHTML = data.weather[0].description;
 
-    // Hide the error message
-    errorMessage.style.display = 'none';
+    
   } catch (error) {
     console.error('Error:', error);
     
-    // Show the error message
+    
     errorMessage.style.display = 'block';
   }
 }
